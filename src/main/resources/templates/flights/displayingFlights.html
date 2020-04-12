@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+        <html lang="en"
+              xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:th="http://www.thymleaf.org">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <title>Displaying Flights</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+            <link rel="stylesheet" href="../css/shards.min.css">
+            <title>Displaying flights</title>
+        </head>
+<body>
+<div class="container">
+    <div class="body-box">
+        <h2 class="box-heading">Displaying Flights</h2>
+        <br>
+        <div class="flightTable">
+            <table class="table">
+                <thead>
+                <td>Airlines</td>
+                <td>Departure City</td>
+                <td>Arrival City</td>
+                <td>Departure Date</td>
+                </thead>
+                <tbody >
+                <tr th:each="flight : ${flights}">
+                    <td th:text="${flight.operatingAirlines}"></td>
+                    <td th:text="${flight.departureCity}"></td>
+                    <td th:text="${flight.arrivalCity}"></td>
+                    <td th:text="${flight.estimatedDepartureTime}"></td>
+                    <td><a th:href="@{/showCompleteReservation?flightId={id}(id=${flight.id})}" class="btn btn-primary">Select</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

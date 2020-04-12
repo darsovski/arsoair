@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shards.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<body>
+<div class="container">
+    <div class="jumbotron jumbo-custom">
+        <h2>Welcome to ArsoAir Airlines</h2>
+    </div>
+    <div class="body-box">
+        <div class="box-heading">
+            <h4>Please Login or Register as a new user to search and book flights</h4>
+        </div>
+
+        <div class="row index-box">
+            <div class="col-sm-6 fa_col">
+                <a th:href="@{/login}">
+                    <i class="btn btn-primary">
+                        <span> Login </span>
+                    </i>
+                </a>
+            </div>
+
+             <div class="col-sm-6 fa_col">
+                 <a th:href="@{/registerUser}">
+                     <i class="btn btn-primary">
+                         <span>Register</span>
+                     </i>
+                 </a>
+             </div>
+         </div>
+    </div>
+</div>
+</body>
+</html>
